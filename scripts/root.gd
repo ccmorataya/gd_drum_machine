@@ -14,44 +14,46 @@ var heavy_kick = load("res://sounds/drum_heavy_kick.wav")
 var roll = load("res://sounds/drum_roll.wav")
 
 func _ready():
-	set_process(true)
+	pass
 
-func _process(delta):
+func _input(event):
 	var music = AudioStreamPlayer.new()
 	add_child(music)
-	if Input.is_action_just_pressed("bass"):
-		music.set_stream(bass)
-		music.play()
-	if Input.is_action_just_pressed("cymbal_HS"):
-		music.set_stream(cymbal_HS)
-		music.play()
-	if Input.is_action_just_pressed("cymbal_CO"):
-		music.set_stream(cymbal_CO)
-		music.play()
-	if Input.is_action_just_pressed("snare"):
-		music.set_stream(snare)
-		music.play()
-	if Input.is_action_just_pressed("splash"):
-		music.set_stream(splash)
-		music.play()
-	if Input.is_action_just_pressed("tom_hi"):
-		music.set_stream(tom_hi)
-		music.play()
-	if Input.is_action_just_pressed("tom_lo"):
-		music.set_stream(tom_lo)
-		music.play()
-	if Input.is_action_just_pressed("tom_mid"):
-		music.set_stream(tom_mid)
-		music.play()
-	if Input.is_action_just_pressed("cowbell"):
-		music.set_stream(cowbell)
-		music.play()
-	if Input.is_action_just_pressed("cymbal_pedal"):
-		music.set_stream(cymbal_pedal)
-		music.play()
-	if Input.is_action_just_pressed("heavy_kick"):
-		music.set_stream(heavy_kick)
-		music.play()
-	if Input.is_action_just_pressed("roll"):
-		music.set_stream(roll)
+	if event is InputEventKey and event.pressed:
+		if event.scancode == KEY_SPACE:
+			music.set_stream(bass)
+			# music.play()
+		if event.scancode == KEY_S:
+			music.set_stream(cymbal_HS)
+			# music.play()
+		if event.scancode == KEY_L:
+			music.set_stream(cymbal_CO)
+			# music.play()
+		if event.scancode == KEY_K:
+			music.set_stream(snare)
+			# music.play()
+		if event.scancode == KEY_A:
+			music.set_stream(splash)
+			# music.play()
+		if event.scancode == KEY_F:
+			music.set_stream(tom_hi)
+			# music.play()
+		if event.scancode == KEY_J:
+			music.set_stream(tom_lo)
+			# music.play()
+		if event.scancode == KEY_D:
+			music.set_stream(tom_mid)
+			# music.play()
+		if event.scancode == KEY_W:
+			music.set_stream(cowbell)
+			# music.play()
+		if event.scancode == KEY_E:
+			music.set_stream(cymbal_pedal)
+			# music.play()
+		if event.scancode == KEY_I:
+			music.set_stream(heavy_kick)
+			# music.play()
+		if event.scancode == KEY_O:
+			music.set_stream(roll)
+			# music.play()
 		music.play()
