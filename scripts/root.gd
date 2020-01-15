@@ -29,6 +29,7 @@ func _input(event):
 	add_child(music)
 	if event is InputEventKey and event.pressed:
 		if event.scancode == KEY_SPACE:
+			$spr_red_pad.modulate.a = 0.7
 			if event.shift:
 				music.set_stream(bass_hard)
 			else:
@@ -77,3 +78,6 @@ func _input(event):
 		if event.scancode == KEY_O:
 			music.set_stream(roll)
 		music.play()
+		print($spr_red_pad.modulate)
+	else:
+		$spr_red_pad.modulate.a = 1
