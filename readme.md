@@ -10,12 +10,12 @@ snare        <kbd>K</kbd>\
 splash       <kbd>A</kbd>\
 tom_hi       <kbd>F</kbd>\
 tom_lo       <kbd>J</kbd>\
-tom_mid      <kbd>D</kbd>\
+tom_mid      <kbd>D</kbd>
 
 ---
 
 ### Others
-cowbell       <kbd>W</kbd>  
-cymbal_pedal  <kbd>E</kbd>  
-heavy_kick    <kbd>I</kbd>  
+cowbell       <kbd>W</kbd>\
+cymbal_pedal  <kbd>E</kbd>\
+heavy_kick    <kbd>I</kbd>\
 roll          <kbd>O</kbd>
