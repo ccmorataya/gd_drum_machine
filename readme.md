@@ -1,21 +1,21 @@
 # gdDrumMachine
 ## Keys Scheme / gdDrumMachine
-  > NOTE: Hard/open activated via <SHIFT> key
+  > NOTE: Hard/open activated via <kbd>SHIFT</kbd> key
 
 ### Main instruments
-bass          <SPACE>
-cymbal_HS     <S>
-cymbal_CO     <L>
-snare         <K>
-splash        <A>
-tom_hi        <F>
-tom_lo        <J>
-tom_mid       <D>
+bass         <kbd>SPACE</kbd>
+cymbal_HS    <kbd>S</kbd>
+cymbal_CO    <kbd>L</kbd>
+snare        <kbd>K</kbd>
+splash       <kbd>A</kbd>
+tom_hi       <kbd>F</kbd>
+tom_lo       <kbd>J</kbd>
+tom_mid      <kbd>D</kbd>
 
 ---
 
 ### Others
-cowbell       <W>
-cymbal_pedal  <E>
-heavy_kick    <I>
-roll          <O>
+cowbell       <kbd>W</kbd>
+cymbal_pedal  <kbd>E</kbd>
+heavy_kick    <kbd>I</kbd>
+roll          <kbd>O</kbd>
