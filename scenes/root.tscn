@@ -10,4 +10,5 @@ script = ExtResource( 1 )
 position = Vector2( 496.629, 493.455 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 2 )
+modulate = Color(1, 1, 1, 0.7)
 

@@ -29,55 +29,58 @@ func _input(event):
 	add_child(music)
 	if event is InputEventKey and event.pressed:
 		if event.scancode == KEY_SPACE:
-			$spr_red_pad.modulate.a = 0.7
+			$spr_red_pad.modulate.a = 1
 			if event.shift:
-				music.set_stream(bass_hard)
+				set_instrument(bass_hard, music)
 			else:
-				music.set_stream(bass_soft)
+				set_instrument(bass_soft, music)
 		if event.scancode == KEY_S:
 			if event.shift:
-				music.set_stream(cymbal_hard)
+				set_instrument(cymbal_hard, music)
 			else:
-				music.set_stream(cymbal_soft)
+				set_instrument(cymbal_soft, music)
 		if event.scancode == KEY_L:
 			if event.shift:
-				music.set_stream(cymbal_open)
+				set_instrument(cymbal_open, music)
 			else:
-				music.set_stream(cymbal_closed)
+				set_instrument(cymbal_closed, music)
 		if event.scancode == KEY_K:
 			if event.shift:
-				music.set_stream(snare_hard)
+				set_instrument(snare_hard, music)
 			else:
-				music.set_stream(snare_soft)
+				set_instrument(snare_soft, music)
 		if event.scancode == KEY_A:
 			if event.shift:
-				music.set_stream(splash_hard)
+				set_instrument(splash_hard, music)
 			else:
-				music.set_stream(splash_soft)
+				set_instrument(splash_soft, music)
 		if event.scancode == KEY_F:
 			if event.shift:
-				music.set_stream(tom_hi_hard)
+				set_instrument(tom_hi_hard, music)
 			else:
-				music.set_stream(tom_hi_soft)
+				set_instrument(tom_hi_soft, music)
 		if event.scancode == KEY_J:
 			if event.shift:
-				music.set_stream(tom_lo_hard)
+				set_instrument(tom_lo_hard, music)
 			else:
-				music.set_stream(tom_lo_soft)
+				set_instrument(tom_lo_soft, music)
 		if event.scancode == KEY_D:
 			if event.shift:
-				music.set_stream(tom_mid_hard)
+				set_instrument(tom_mid_hard, music)
 			else:
-				music.set_stream(tom_mid_soft)
+				set_instrument(tom_mid_soft, music)
 		if event.scancode == KEY_W:
-			music.set_stream(cowbell)
+			set_instrument(cowbell, music)
 		if event.scancode == KEY_E:
-			music.set_stream(cymbal_pedal)
+			set_instrument(cymbal_pedal, music)
 		if event.scancode == KEY_I:
-			music.set_stream(heavy_kick)
+			set_instrument(heavy_kick, music)
 		if event.scancode == KEY_O:
-			music.set_stream(roll)
+			set_instrument(roll, music)
 		music.play()
-		print($spr_red_pad.modulate)
 	else:
-		$spr_red_pad.modulate.a = 1
+		$spr_red_pad.modulate.a = 0.7
+
+func set_instrument(instrument, audio_stream_player):
+	audio_stream_player.set_stream(instrument)
+	print(instrument.get_length())
