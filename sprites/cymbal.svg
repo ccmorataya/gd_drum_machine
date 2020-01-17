@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- Created with Vectornator for iOS (http://vectornator.io/) --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="0 0 1024 1024">
+<metadata>
+<vectornator:setting key="DisplayWhiteBackground" value="0"/>
+<vectornator:setting key="RulersVisible" value="1"/>
+<vectornator:setting key="SnapToEdges" value="0"/>
+<vectornator:setting key="Units" value="Pixels"/>
+<vectornator:setting key="DynamicGuides" value="1"/>
+<vectornator:setting key="SnapToPoints" value="0"/>
+<vectornator:setting key="SnapToGrid" value="0"/>
+<vectornator:setting key="SnapToGuides" value="1"/>
+<vectornator:setting key="ShowGrid" value="0"/>
+<vectornator:setting key="GridSpacing" value="36.00450134277344"/>
+</metadata>
+<defs/>
+<g id="Layer 1" vectornator:layerName="Layer 1">
+<path stroke="#ffe700" stroke-width="100.54" d="M45.6047+513.439C45.6047+256.651+253.773+48.4835+510.561+48.4835C767.349+48.4835+975.517+256.651+975.517+513.439C975.517+770.227+767.349+978.395+510.561+978.395C253.773+978.395+45.6047+770.227+45.6047+513.439Z" fill="none" stroke-linecap="butt" opacity="1" stroke-linejoin="miter"/>
+<path stroke="#ffe700" stroke-width="30" d="M208.31+513.439C208.31+345.716+344.276+209.749+512+209.749C679.724+209.749+815.69+345.716+815.69+513.439C815.69+681.163+679.724+817.13+512+817.13C344.276+817.13+208.31+681.163+208.31+513.439Z" fill="none" stroke-linecap="butt" opacity="1" stroke-linejoin="miter"/>
+<path stroke="#ffe700" stroke-width="30" d="M293.44+512C293.44+392.088+390.648+294.88+510.561+294.88C630.473+294.88+727.681+392.088+727.681+512C727.681+631.912+630.473+729.12+510.561+729.12C390.648+729.12+293.44+631.912+293.44+512Z" fill="none" stroke-linecap="butt" opacity="1" stroke-linejoin="miter"/>
+<path stroke="#ffe700" stroke-width="30" d="M370.603+513.439C370.603+436.143+433.264+373.482+510.561+373.482C587.857+373.482+650.518+436.143+650.518+513.439C650.518+590.736+587.857+653.397+510.561+653.397C433.264+653.397+370.603+590.736+370.603+513.439Z" fill="none" stroke-linecap="butt" opacity="1" stroke-linejoin="miter"/>
+</g>
+</svg>

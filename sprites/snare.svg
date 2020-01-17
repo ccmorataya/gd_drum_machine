@@ -3,18 +3,18 @@
 <metadata>
 <vectornator:setting key="DisplayWhiteBackground" value="0"/>
 <vectornator:setting key="RulersVisible" value="1"/>
-<vectornator:setting key="GridSpacing" value="36.00450134277344"/>
+<vectornator:setting key="SnapToEdges" value="0"/>
 <vectornator:setting key="Units" value="Pixels"/>
 <vectornator:setting key="DynamicGuides" value="1"/>
 <vectornator:setting key="SnapToPoints" value="0"/>
 <vectornator:setting key="SnapToGrid" value="0"/>
 <vectornator:setting key="SnapToGuides" value="1"/>
 <vectornator:setting key="ShowGrid" value="0"/>
-<vectornator:setting key="SnapToEdges" value="0"/>
+<vectornator:setting key="GridSpacing" value="36.00450134277344"/>
 </metadata>
 <defs/>
 <g id="Layer 1" vectornator:layerName="Layer 1">
-<path stroke="#ff0000" stroke-width="100.54" d="M45.6047+513.439C45.6047+256.651+253.773+48.4835+510.561+48.4835C767.349+48.4835+975.517+256.651+975.517+513.439C975.517+770.227+767.349+978.395+510.561+978.395C253.773+978.395+45.6047+770.227+45.6047+513.439Z" fill="none" stroke-linecap="butt" opacity="1" stroke-linejoin="miter"/>
-<path d="M415.546+512C415.546+459.525+458.086+416.986+510.561+416.986C563.036+416.986+605.575+459.525+605.575+512C605.575+564.475+563.036+607.014+510.561+607.014C458.086+607.014+415.546+564.475+415.546+512Z" opacity="1" fill="#ff0000"/>
+<path stroke="#f000ff" stroke-width="100.54" d="M45.6047+513.439C45.6047+256.651+253.773+48.4835+510.561+48.4835C767.349+48.4835+975.517+256.651+975.517+513.439C975.517+770.227+767.349+978.395+510.561+978.395C253.773+978.395+45.6047+770.227+45.6047+513.439Z" fill="none" stroke-linecap="butt" opacity="1" stroke-linejoin="miter"/>
+<path stroke="#f000ff" stroke-width="30" d="M156.119+512C156.119+315.452+315.452+156.119+512+156.119C708.548+156.119+867.881+315.452+867.881+512C867.881+708.548+708.548+867.881+512+867.881C315.452+867.881+156.119+708.548+156.119+512Z" fill="none" stroke-linecap="butt" opacity="1" stroke-linejoin="miter"/>
 </g>
 </svg>
