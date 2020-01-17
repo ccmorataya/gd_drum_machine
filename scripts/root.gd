@@ -21,10 +21,15 @@ var cymbal_pedal = load("res://sounds/drum_cymbal_pedal.wav")
 var heavy_kick = load("res://sounds/drum_heavy_kick.wav")
 var roll = load("res://sounds/drum_roll.wav")
 
+var timer = 0.0
+
+var old_value = 0.0
+var new_value = 0.0
+
 func _ready():
 	print(get_viewport().size.x)
 	print(get_viewport().size.y)
-	pass
+	$tp_drum_bass.value = bass_hard.get_length()
 
 func _input(event):
 	var music = AudioStreamPlayer.new()
@@ -36,7 +41,7 @@ func _input(event):
 				set_instrument(bass_hard, music)
 			else:
 				set_instrument(bass_soft, music)
-		if event.scancode == KEY_S:
+		if event.scancode == KEY_A:
 			$spr_cymbal_ho.modulate.a = 1
 			if event.shift:
 				set_instrument(cymbal_hard, music)
@@ -54,13 +59,13 @@ func _input(event):
 				set_instrument(snare_hard, music)
 			else:
 				set_instrument(snare_soft, music)
-		if event.scancode == KEY_A:
+		if event.scancode == KEY_S:
 			$spr_splash.modulate.a = 1
 			if event.shift:
 				set_instrument(splash_hard, music)
 			else:
 				set_instrument(splash_soft, music)
-		if event.scancode == KEY_F:
+		if event.scancode == KEY_D:
 			$spr_tom_hi.modulate.a = 1
 			if event.shift:
 				set_instrument(tom_hi_hard, music)
@@ -72,7 +77,7 @@ func _input(event):
 				set_instrument(tom_lo_hard, music)
 			else:
 				set_instrument(tom_lo_soft, music)
-		if event.scancode == KEY_D:
+		if event.scancode == KEY_F:
 			$spr_tom_mid.modulate.a = 1
 			if event.shift:
 				set_instrument(tom_mid_hard, music)
@@ -99,4 +104,20 @@ func _input(event):
 
 func set_instrument(instrument, audio_stream_player):
 	audio_stream_player.set_stream(instrument)
-	print(instrument.get_length())
+	print($tp_drum_bass.value)
+	$tp_drum_bass.value += 1
+	print($tp_drum_bass.value)
+	# print(instrument.get_length())
+
+func _process(delta):
+	pass
+	# timer += delta
+	# if timer >= 1.0:
+	# 	timer = 0.0
+	# 	old_value = $tp_drum_bass.get_value()
+	# 	new_value = old_value - 1
+	# 	$tp_drum_bass.set_value($tp_drum_bass.get_value() - 1)
+	# 	# label_node.set_text(str(new_value))
+	# 	if (new_value) == 0:
+	# 		print("Timer finished")
+	# 		# set_process(false)

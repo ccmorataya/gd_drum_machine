@@ -1,13 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/root.gd" type="Script" id=1]
 [ext_resource path="res://sprites/drum_bass.svg" type="Texture" id=2]
-[ext_resource path="res://sprites/cymbal.svg" type="Texture" id=3]
-[ext_resource path="res://sprites/snare.svg" type="Texture" id=4]
-[ext_resource path="res://sprites/splash.svg" type="Texture" id=5]
-[ext_resource path="res://sprites/tom_hi.svg" type="Texture" id=6]
-[ext_resource path="res://sprites/tom_lo.svg" type="Texture" id=7]
-[ext_resource path="res://sprites/tom_mid.svg" type="Texture" id=8]
+[ext_resource path="res://sprites/tom_hi.svg" type="Texture" id=3]
+[ext_resource path="res://sprites/tom_mid.svg" type="Texture" id=4]
+[ext_resource path="res://sprites/tom_lo.svg" type="Texture" id=5]
+[ext_resource path="res://sprites/cymbal.svg" type="Texture" id=6]
+[ext_resource path="res://sprites/splash.svg" type="Texture" id=7]
+[ext_resource path="res://sprites/snare.svg" type="Texture" id=8]
 
 [node name="root" type="Node2D"]
 script = ExtResource( 1 )
@@ -17,45 +17,57 @@ modulate = Color( 1, 1, 1, 0.7 )
 position = Vector2( 496.629, 493.455 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 2 )
+visible = false
 
 [node name="spr_tom_hi" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.7 )
-position = Vector2( 300, 300 )
+position = Vector2( 320, 275 )
 scale = Vector2( 0.15, 0.15 )
-texture = ExtResource( 6 )
+texture = ExtResource( 3 )
 
 [node name="spr_tom_mid" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.7 )
-position = Vector2( 470, 310 )
+position = Vector2( 490, 285 )
 scale = Vector2( 0.13, 0.13 )
-texture = ExtResource( 8 )
+texture = ExtResource( 4 )
 
 [node name="spr_tom_lo" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.7 )
-position = Vector2( 640, 320 )
+position = Vector2( 660, 295 )
 scale = Vector2( 0.11, 0.11 )
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 
 [node name="spr_cymbal_ho" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.7 )
 position = Vector2( 200, 100 )
-scale = Vector2( 0.10, 0.10 )
-texture = ExtResource( 3 )
-
-[node name="spr_snare" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.7 )
-position = Vector2( 370, 100 )
-scale = Vector2( 0.10, 0.10 )
-texture = ExtResource( 4 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 6 )
 
 [node name="spr_splash" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.7 )
+position = Vector2( 370, 100 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 7 )
+
+[node name="spr_snare" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.7 )
 position = Vector2( 540, 100 )
-scale = Vector2( 0.10, 0.10 )
-texture = ExtResource( 5 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 8 )
 
 [node name="spr_cymbal_oc" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.7 )
 position = Vector2( 710, 100 )
-scale = Vector2( 0.10, 0.10 )
-texture = ExtResource( 3 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 6 )
+
+[node name="tp_drum_bass" type="TextureProgress" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_under = ExtResource( 2 )
+texture_progress = ExtResource( 2 )
+fill_mode = 4
+tint_under = Color( 1, 1, 1, 0.7 )
+rect_position = Vector2( 380, 380 )
+
