@@ -22,6 +22,8 @@ var heavy_kick = load("res://sounds/drum_heavy_kick.wav")
 var roll = load("res://sounds/drum_roll.wav")
 
 func _ready():
+	print(get_viewport().size.x)
+	print(get_viewport().size.y)
 	pass
 
 func _input(event):
@@ -29,42 +31,49 @@ func _input(event):
 	add_child(music)
 	if event is InputEventKey and event.pressed:
 		if event.scancode == KEY_SPACE:
-			$spr_red_pad.modulate.a = 1
+			$spr_drum_bass.modulate.a = 1
 			if event.shift:
 				set_instrument(bass_hard, music)
 			else:
 				set_instrument(bass_soft, music)
 		if event.scancode == KEY_S:
+			$spr_cymbal_ho.modulate.a = 1
 			if event.shift:
 				set_instrument(cymbal_hard, music)
 			else:
 				set_instrument(cymbal_soft, music)
 		if event.scancode == KEY_L:
+			$spr_cymbal_oc.modulate.a = 1
 			if event.shift:
 				set_instrument(cymbal_open, music)
 			else:
 				set_instrument(cymbal_closed, music)
 		if event.scancode == KEY_K:
+			$spr_snare.modulate.a = 1
 			if event.shift:
 				set_instrument(snare_hard, music)
 			else:
 				set_instrument(snare_soft, music)
 		if event.scancode == KEY_A:
+			$spr_splash.modulate.a = 1
 			if event.shift:
 				set_instrument(splash_hard, music)
 			else:
 				set_instrument(splash_soft, music)
 		if event.scancode == KEY_F:
+			$spr_tom_hi.modulate.a = 1
 			if event.shift:
 				set_instrument(tom_hi_hard, music)
 			else:
 				set_instrument(tom_hi_soft, music)
 		if event.scancode == KEY_J:
+			$spr_tom_lo.modulate.a = 1
 			if event.shift:
 				set_instrument(tom_lo_hard, music)
 			else:
 				set_instrument(tom_lo_soft, music)
 		if event.scancode == KEY_D:
+			$spr_tom_mid.modulate.a = 1
 			if event.shift:
 				set_instrument(tom_mid_hard, music)
 			else:
@@ -79,7 +88,14 @@ func _input(event):
 			set_instrument(roll, music)
 		music.play()
 	else:
-		$spr_red_pad.modulate.a = 0.7
+		$spr_drum_bass.modulate.a = 0.7
+		$spr_tom_hi.modulate.a = 0.7
+		$spr_tom_mid.modulate.a = 0.7
+		$spr_tom_lo.modulate.a = 0.7
+		$spr_cymbal_ho.modulate.a = 0.7
+		$spr_cymbal_oc.modulate.a = 0.7
+		$spr_snare.modulate.a = 0.7
+		$spr_splash.modulate.a = 0.7
 
 func set_instrument(instrument, audio_stream_player):
 	audio_stream_player.set_stream(instrument)
