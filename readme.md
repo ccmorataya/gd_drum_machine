@@ -4,17 +4,17 @@
 
 ### Main instruments
 bass         <kbd>SPACE</kbd>\
-cymbal_HS    <kbd>S</kbd>\
-cymbal_CO    <kbd>L</kbd>\
 snare        <kbd>K</kbd>\
-splash       <kbd>A</kbd>\
-tom_hi       <kbd>F</kbd>\
 tom_lo       <kbd>J</kbd>\
-tom_mid      <kbd>D</kbd>
+tom_hi       <kbd>D</kbd>\
+tom_mid      <kbd>F</kbd>
+splash       <kbd>S</kbd>\
+cymbal_HS    <kbd>A</kbd>\
+cymbal_OC    <kbd>L</kbd>\
 
 ---
 
-### Others
+### Others (not assigned yet)
 cowbell       <kbd>W</kbd>\
 cymbal_pedal  <kbd>E</kbd>\
 heavy_kick    <kbd>I</kbd>\
