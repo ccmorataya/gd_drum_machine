@@ -21,103 +21,113 @@ var cymbal_pedal = load("res://sounds/drum_cymbal_pedal.wav")
 var heavy_kick = load("res://sounds/drum_heavy_kick.wav")
 var roll = load("res://sounds/drum_roll.wav")
 
-var timer = 0.0
-
-var old_value = 0.0
-var new_value = 0.0
+onready var instrument_dict = {
+	"bass": [
+		bass_hard,
+		bass_soft,
+		$tp_drum_bass
+	],
+	"cymbal_hs": [
+		cymbal_hard,
+		cymbal_soft,
+		$tp_cymbal_hs
+	],
+	"cymbal_oc": [
+		cymbal_open,
+		cymbal_closed,
+		$tp_cymbal_oc
+	],
+	"snare": [
+		snare_hard,
+		snare_soft,
+		$tp_snare
+	],
+	"splash": [
+		splash_hard,
+		splash_soft,
+		$tp_splash
+	],
+	"tom_hi": [
+		tom_hi_hard,
+		tom_hi_soft,
+		$tp_tom_hi
+	],
+	"tom_mid": [
+		tom_mid_hard,
+		tom_mid_soft,
+		$tp_tom_mid
+	],
+	"tom_lo": [
+		tom_lo_hard,
+		tom_lo_soft,
+		$tp_tom_lo
+	]
+}
 
 func _ready():
-	print(get_viewport().size.x)
-	print(get_viewport().size.y)
-	$tp_drum_bass.value = bass_hard.get_length()
+	OS.set_window_size(Vector2(320,240))
 
 func _input(event):
 	var music = AudioStreamPlayer.new()
 	add_child(music)
 	if event is InputEventKey and event.pressed:
 		if event.scancode == KEY_SPACE:
-			$spr_drum_bass.modulate.a = 1
 			if event.shift:
-				set_instrument(bass_hard, music)
+				set_instrument(instrument_dict["bass"], true, music)
 			else:
-				set_instrument(bass_soft, music)
+				set_instrument(instrument_dict["bass"], false, music)
 		if event.scancode == KEY_A:
-			$spr_cymbal_ho.modulate.a = 1
 			if event.shift:
-				set_instrument(cymbal_hard, music)
+				set_instrument(instrument_dict["cymbal_hs"], true, music)
 			else:
-				set_instrument(cymbal_soft, music)
+				set_instrument(instrument_dict["cymbal_hs"], false, music)
 		if event.scancode == KEY_L:
-			$spr_cymbal_oc.modulate.a = 1
 			if event.shift:
-				set_instrument(cymbal_open, music)
+				set_instrument(instrument_dict["cymbal_oc"], true, music)
 			else:
-				set_instrument(cymbal_closed, music)
+				set_instrument(instrument_dict["cymbal_oc"], false, music)
 		if event.scancode == KEY_K:
-			$spr_snare.modulate.a = 1
 			if event.shift:
-				set_instrument(snare_hard, music)
+				set_instrument(instrument_dict["snare"], true, music)
 			else:
-				set_instrument(snare_soft, music)
+				set_instrument(instrument_dict["snare"], false, music)
 		if event.scancode == KEY_S:
-			$spr_splash.modulate.a = 1
 			if event.shift:
-				set_instrument(splash_hard, music)
+				set_instrument(instrument_dict["splash"], true, music)
 			else:
-				set_instrument(splash_soft, music)
+				set_instrument(instrument_dict["splash"], false, music)
 		if event.scancode == KEY_D:
-			$spr_tom_hi.modulate.a = 1
 			if event.shift:
-				set_instrument(tom_hi_hard, music)
+				set_instrument(instrument_dict["tom_hi"], true, music)
 			else:
-				set_instrument(tom_hi_soft, music)
+				set_instrument(instrument_dict["tom_hi"], false, music)
 		if event.scancode == KEY_J:
-			$spr_tom_lo.modulate.a = 1
 			if event.shift:
-				set_instrument(tom_lo_hard, music)
+				set_instrument(instrument_dict["tom_lo"], true, music)
 			else:
-				set_instrument(tom_lo_soft, music)
+				set_instrument(instrument_dict["tom_lo"], false, music)
 		if event.scancode == KEY_F:
-			$spr_tom_mid.modulate.a = 1
 			if event.shift:
-				set_instrument(tom_mid_hard, music)
+				set_instrument(instrument_dict["tom_mid"], true, music)
 			else:
-				set_instrument(tom_mid_soft, music)
-		if event.scancode == KEY_W:
-			set_instrument(cowbell, music)
-		if event.scancode == KEY_E:
-			set_instrument(cymbal_pedal, music)
-		if event.scancode == KEY_I:
-			set_instrument(heavy_kick, music)
-		if event.scancode == KEY_O:
-			set_instrument(roll, music)
+				set_instrument(instrument_dict["tom_mid"], false, music)
+		# if event.scancode == KEY_W:
+		# 	set_instrument(cowbell, music)
+		# if event.scancode == KEY_E:
+		# 	set_instrument(cymbal_pedal, music)
+		# if event.scancode == KEY_I:
+		# 	set_instrument(heavy_kick, music)
+		# if event.scancode == KEY_O:
+		# 	set_instrument(roll, music)
 		music.play()
-	else:
-		$spr_drum_bass.modulate.a = 0.7
-		$spr_tom_hi.modulate.a = 0.7
-		$spr_tom_mid.modulate.a = 0.7
-		$spr_tom_lo.modulate.a = 0.7
-		$spr_cymbal_ho.modulate.a = 0.7
-		$spr_cymbal_oc.modulate.a = 0.7
-		$spr_snare.modulate.a = 0.7
-		$spr_splash.modulate.a = 0.7
 
-func set_instrument(instrument, audio_stream_player):
-	audio_stream_player.set_stream(instrument)
-	print($tp_drum_bass.value)
-	$tp_drum_bass.value += 1
-	print($tp_drum_bass.value)
-	# print(instrument.get_length())
+func set_instrument(instrument_array, isHard, audio_stream_player):
+	audio_stream_player.set_stream(instrument_array[0] if isHard else instrument_array[1])
+	instrument_array[2].max_value = (instrument_array[0].get_length() if isHard else instrument_array[1].get_length() * 100) - 20
+	instrument_array[2].max_value = instrument_array[2].max_value + 20 if instrument_array[2].max_value <= 0 else instrument_array[2].max_value
+	instrument_array[2].value = instrument_array[2].max_value
 
 func _process(delta):
-	pass
-	# timer += delta
-	# if timer >= 1.0:
-	# 	timer = 0.0
-	# 	old_value = $tp_drum_bass.get_value()
-	# 	new_value = old_value - 1
-	# 	$tp_drum_bass.set_value($tp_drum_bass.get_value() - 1)
-	# 	# label_node.set_text(str(new_value))
-	# 	if (new_value) == 0:
-	# 		print("Timer finished")
-	# 		# set_process(false)
+	for instrument in instrument_dict.values():
+		if instrument[2].value > 0:
+			instrument[2].value -= 1
