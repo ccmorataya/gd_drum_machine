@@ -3,6 +3,7 @@
 
 ### Main instruments
   > NOTE: Hard/open activated via <kbd>SHIFT</kbd> key
+
 | Instrument | Key               |
 | ---------- | ----------------- |
 | bass       | <kbd>SPACE</kbd>  |
