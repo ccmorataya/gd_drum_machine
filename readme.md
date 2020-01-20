@@ -1,8 +1,8 @@
 # gdDrumMachine
 ## Keys Scheme / gdDrumMachine
-  > NOTE: Hard/open activated via <kbd>SHIFT</kbd> key
 
 ### Main instruments
+  > NOTE: Hard/open activated via <kbd>SHIFT</kbd> key
 | Instrument | Key               |
 | ---------- | ----------------- |
 | bass       | <kbd>SPACE</kbd>  |
@@ -17,7 +17,9 @@
 ---
 
 ### Others (not assigned yet)
-cowbell       <kbd>W</kbd>\
-cymbal_pedal  <kbd>E</kbd>\
-heavy_kick    <kbd>I</kbd>\
-roll          <kbd>O</kbd>
+| Instrument   | Key               |
+| ------------ | ----------------- |
+| cowbell      | <kbd>W</kbd>      |
+| cymbal_pedal | <kbd>E</kbd>      |
+| heavy_kick   | <kbd>I</kbd>      |
+| roll         | <kbd>O</kbd>      |
