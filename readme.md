@@ -1,5 +1,7 @@
 # gdDrumMachine
+
 ## Keys Scheme / gdDrumMachine
+The key scheme is designed for QWERTY keyboards
 
 ### Main instruments
   > NOTE: Hard/open activated via <kbd>SHIFT</kbd> key
@@ -30,6 +32,7 @@
 ### To do
 
 - [X] Add others (unasigned) instruments
+- [ ] Fix animation for hard/open
 - [ ] Asign bars for each other instrument
 - [ ] Add a master pitch controler
 - [ ] Add diferents types of drum kit
