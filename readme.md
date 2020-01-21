@@ -24,3 +24,12 @@
 | cymbal_pedal | <kbd>E</kbd>      |
 | heavy_kick   | <kbd>I</kbd>      |
 | roll         | <kbd>O</kbd>      |
+
+---
+
+### To do
+
+- [ ] Add others (unasigned) instruments
+- [ ] Asign bars for each other instrument
+- [ ] Add a master pitch controler
+- [ ] Add diferents types of drum kit
