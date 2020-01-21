@@ -76,7 +76,7 @@ func _input(event):
 				set_instrument(instrument_dict["bass"], true, music)
 			else:
 				set_instrument(instrument_dict["bass"], false, music)
-		if event.scancode == KEY_A:
+		if event.scancode == KEY_S:
 			if event.shift:
 				set_instrument(instrument_dict["cymbal_hs"], true, music)
 			else:
@@ -86,27 +86,27 @@ func _input(event):
 				set_instrument(instrument_dict["cymbal_oc"], true, music)
 			else:
 				set_instrument(instrument_dict["cymbal_oc"], false, music)
-		if event.scancode == KEY_K:
+		if event.scancode == KEY_D:
 			if event.shift:
 				set_instrument(instrument_dict["snare"], true, music)
 			else:
 				set_instrument(instrument_dict["snare"], false, music)
-		if event.scancode == KEY_S:
+		if event.scancode == KEY_G or event.scancode == KEY_H:
 			if event.shift:
 				set_instrument(instrument_dict["splash"], true, music)
 			else:
 				set_instrument(instrument_dict["splash"], false, music)
-		if event.scancode == KEY_D:
+		if event.scancode == KEY_F:
 			if event.shift:
 				set_instrument(instrument_dict["tom_hi"], true, music)
 			else:
 				set_instrument(instrument_dict["tom_hi"], false, music)
-		if event.scancode == KEY_J:
+		if event.scancode == KEY_K:
 			if event.shift:
 				set_instrument(instrument_dict["tom_lo"], true, music)
 			else:
 				set_instrument(instrument_dict["tom_lo"], false, music)
-		if event.scancode == KEY_F:
+		if event.scancode == KEY_J:
 			if event.shift:
 				set_instrument(instrument_dict["tom_mid"], true, music)
 			else:
