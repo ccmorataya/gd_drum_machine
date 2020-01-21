@@ -29,7 +29,7 @@
 
 ### To do
 
-- [ ] Add others (unasigned) instruments
+- [X] Add others (unasigned) instruments
 - [ ] Asign bars for each other instrument
 - [ ] Add a master pitch controler
 - [ ] Add diferents types of drum kit

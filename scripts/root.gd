@@ -111,14 +111,14 @@ func _input(event):
 				set_instrument(instrument_dict["tom_mid"], true, music)
 			else:
 				set_instrument(instrument_dict["tom_mid"], false, music)
-		# if event.scancode == KEY_W:
-		# 	set_instrument(cowbell, music)
-		# if event.scancode == KEY_E:
-		# 	set_instrument(cymbal_pedal, music)
-		# if event.scancode == KEY_I:
-		# 	set_instrument(heavy_kick, music)
-		# if event.scancode == KEY_O:
-		# 	set_instrument(roll, music)
+		if event.scancode == KEY_W:
+			music.set_stream(cowbell)
+		if event.scancode == KEY_E:
+			music.set_stream(cymbal_pedal)
+		if event.scancode == KEY_I:
+			music.set_stream(heavy_kick)
+		if event.scancode == KEY_O:
+			music.set_stream(roll)
 		music.play()
 
 func set_instrument(instrument_array, isHard, audio_stream_player):
