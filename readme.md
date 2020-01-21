@@ -32,7 +32,7 @@ The key scheme is designed for QWERTY keyboards
 ### To do
 
 - [X] Add others (unasigned) instruments
-- [ ] Fix animation for hard/open
+- [X] Fix animation for hard/open
 - [ ] Asign bars for each other instrument
 - [ ] Add a master pitch controler
 - [ ] Add diferents types of drum kit

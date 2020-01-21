@@ -123,9 +123,14 @@ func _input(event):
 
 func set_instrument(instrument_array, isHard, audio_stream_player):
 	audio_stream_player.set_stream(instrument_array[0] if isHard else instrument_array[1])
-	instrument_array[2].max_value = (instrument_array[0].get_length() if isHard else instrument_array[1].get_length() * 100) - 20
-	instrument_array[2].max_value = instrument_array[2].max_value + 20 if instrument_array[2].max_value <= 0 else instrument_array[2].max_value
-	instrument_array[2].value = instrument_array[2].max_value
+	var tp_reference = instrument_array[2]
+	tp_reference.max_value = ((instrument_array[0].get_length() if isHard else instrument_array[1].get_length()) * 100) - 20
+	# CM:: negative validation
+	tp_reference.max_value *= -1 if tp_reference.max_value <= -1 else (-10 if tp_reference.max_value > -1 and tp_reference.max_value < 0 else 1)
+	# CM:: positive validation
+	tp_reference.max_value += 1 if tp_reference.max_value < 2 else 0
+	print(tp_reference.max_value)
+	tp_reference.value = tp_reference.max_value
 
 func _process(delta):
 	for instrument in instrument_dict.values():
