@@ -61,6 +61,26 @@ onready var instrument_dict = {
 		tom_lo_hard,
 		tom_lo_soft,
 		$tp_tom_lo
+	],
+	"cowbell": [
+		cowbell,
+		null,
+		$tp_cowbell
+	],
+	"cymbal_pedal": [
+		cymbal_pedal,
+		null,
+		$tp_cymbal_pedal
+	],
+	"heavy_kick": [
+		heavy_kick,
+		null,
+		$tp_heavy_kick
+	],
+	"roll": [
+		roll,
+		null,
+		$tp_roll
 	]
 }
 
@@ -112,13 +132,13 @@ func _input(event):
 			else:
 				set_instrument(instrument_dict["tom_mid"], false, music)
 		if event.scancode == KEY_W:
-			music.set_stream(cowbell)
+			set_instrument(instrument_dict["cowbell"], true, music)
 		if event.scancode == KEY_E:
-			music.set_stream(cymbal_pedal)
+			set_instrument(instrument_dict["cymbal_pedal"], true, music)
 		if event.scancode == KEY_I:
-			music.set_stream(heavy_kick)
+			set_instrument(instrument_dict["heavy_kick"], true, music)
 		if event.scancode == KEY_O:
-			music.set_stream(roll)
+			set_instrument(instrument_dict["roll"], true, music)
 		music.play()
 
 func set_instrument(instrument_array, isHard, audio_stream_player):
@@ -128,7 +148,7 @@ func set_instrument(instrument_array, isHard, audio_stream_player):
 	# CM:: negative validation
 	tp_reference.max_value *= -1 if tp_reference.max_value <= -1 else (-10 if tp_reference.max_value > -1 and tp_reference.max_value < 0 else 1)
 	# CM:: positive validation
-	tp_reference.max_value += 1 if tp_reference.max_value < 2 else 0
+	tp_reference.max_value += 1 if tp_reference.max_value < 2 else (-180 if tp_reference.max_value > 500 else 0)
 	print(tp_reference.max_value)
 	tp_reference.value = tp_reference.max_value
 
