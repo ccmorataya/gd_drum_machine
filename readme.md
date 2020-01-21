@@ -4,16 +4,16 @@
 ### Main instruments
   > NOTE: Hard/open activated via <kbd>SHIFT</kbd> key
 
-| Instrument | Key               |
-| ---------- | ----------------- |
-| bass       | <kbd>SPACE</kbd>  |
-| snare      | <kbd>K</kbd>      |
-| tom_lo     | <kbd>J</kbd>      |
-| tom_hi     | <kbd>D</kbd>      |
-| tom_mid    | <kbd>F</kbd>      |
-| splash     | <kbd>S</kbd>      |
-| cymbal_HS  | <kbd>A</kbd>      |
-| cymbal_OC  | <kbd>L</kbd>      |
+| Instrument | Key                       |
+| ---------- | -----------------         |
+| bass       | <kbd>SPACE</kbd>          |
+| snare      | <kbd>D</kbd>              |
+| tom_lo     | <kbd>J</kbd>              |
+| tom_hi     | <kbd>F</kbd>              |
+| tom_mid    | <kbd>J</kbd>              |
+| splash     | <kbd>G</kbd>/<kbd>H</kbd> |
+| cymbal_HS  | <kbd>S</kbd>              |
+| cymbal_OC  | <kbd>L</kbd>              |
 
 ---
 
