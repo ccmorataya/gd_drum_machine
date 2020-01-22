@@ -8,7 +8,10 @@
 [ext_resource path="res://sprites/cymbal.svg" type="Texture" id=6]
 [ext_resource path="res://sprites/splash.svg" type="Texture" id=7]
 [ext_resource path="res://sprites/snare.svg" type="Texture" id=8]
-[ext_resource path="res://icon.png" type="Texture" id=9]
+[ext_resource path="res://sprites/bar_1_red.svg" type="Texture" id=9]
+[ext_resource path="res://sprites/bar_2_blue.svg" type="Texture" id=10]
+[ext_resource path="res://sprites/bar_3_green.svg" type="Texture" id=11]
+[ext_resource path="res://sprites/bar_4_cyan.svg" type="Texture" id=12]
 
 [node name="root" type="Node2D"]
 script = ExtResource( 1 )
@@ -94,37 +97,33 @@ margin_bottom = 40.0
 fill_mode = 5
 
 [node name="tp_cowbell" type="TextureProgress" parent="."]
-tint_under = Color( 1, 0, 0, 0.7 )
-tint_progress = Color( 1, 0, 0, 1 )
+tint_under = Color( 1, 1, 1, 0.7 )
 rect_position = Vector2( 0, 0 )
-rect_scale = Vector2( 1, 1 )
+rect_scale = Vector2( 0.0625, 0.0625 )
 texture_under = ExtResource( 9 )
 texture_progress = ExtResource( 9 )
 fill_mode = 0
 
 [node name="tp_cymbal_pedal" type="TextureProgress" parent="."]
-tint_under = Color( 0, 1, 0, 0.7 )
-tint_progress = Color( 0, 1, 0, 1 )
+tint_under = Color( 1, 1, 1, 0.7 )
 rect_position = Vector2( 64, 0 )
-rect_scale = Vector2( 1, 1 )
-texture_under = ExtResource( 9 )
-texture_progress = ExtResource( 9 )
+rect_scale = Vector2( 0.0625, 0.0625 )
+texture_under = ExtResource( 10 )
+texture_progress = ExtResource( 10 )
 fill_mode = 0
 
 [node name="tp_heavy_kick" type="TextureProgress" parent="."]
-tint_under = Color( 0, 0, 1, 0.7 )
-tint_progress = Color( 0, 0, 1, 1 )
+tint_under = Color( 1, 1, 1, 0.7 )
 rect_position = Vector2( 128, 0 )
-rect_scale = Vector2( 1, 1 )
-texture_under = ExtResource( 9 )
-texture_progress = ExtResource( 9 )
+rect_scale = Vector2( 0.0625, 0.0625 )
+texture_under = ExtResource( 11 )
+texture_progress = ExtResource( 11 )
 fill_mode = 0
 
 [node name="tp_roll" type="TextureProgress" parent="."]
-tint_under = Color( 0, 1, 1, 0.7 )
-tint_progress = Color( 0, 1, 1, 1 )
+tint_under = Color( 1, 1, 1, 0.7 )
 rect_position = Vector2( 192, 0 )
-rect_scale = Vector2( 1, 1 )
-texture_under = ExtResource( 9 )
-texture_progress = ExtResource( 9 )
+rect_scale = Vector2( 0.0625, 0.0625 )
+texture_under = ExtResource( 12 )
+texture_progress = ExtResource( 12 )
 fill_mode = 0
