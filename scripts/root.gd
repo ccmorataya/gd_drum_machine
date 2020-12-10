@@ -25,22 +25,22 @@ onready var instrument_dict = {
 	"bass": [
 		bass_hard,
 		bass_soft,
-		$tp_drum_bass
+		$hbc_instruments/tp_drum_bass
 	],
 	"cymbal_hs": [
 		cymbal_hard,
 		cymbal_soft,
-		$tp_cymbal_hs
+		$hbc_instruments/tp_cymbal_hs
 	],
 	"cymbal_oc": [
 		cymbal_open,
 		cymbal_closed,
-		$tp_cymbal_oc
+		$hbc_instruments/tp_cymbal_oc
 	],
 	"snare": [
 		snare_hard,
 		snare_soft,
-		$tp_snare
+		$hbc_instruments/tp_snare
 	],
 	"splash": [
 		splash_hard,
@@ -50,17 +50,17 @@ onready var instrument_dict = {
 	"tom_hi": [
 		tom_hi_hard,
 		tom_hi_soft,
-		$tp_tom_hi
+		$hbc_instruments/tp_tom_hi
 	],
 	"tom_mid": [
 		tom_mid_hard,
 		tom_mid_soft,
-		$tp_tom_mid
+		$hbc_instruments/tp_tom_mid
 	],
 	"tom_lo": [
 		tom_lo_hard,
 		tom_lo_soft,
-		$tp_tom_lo
+		$hbc_instruments/tp_tom_lo
 	],
 	"cowbell": [
 		cowbell,
@@ -85,7 +85,7 @@ onready var instrument_dict = {
 }
 
 func _ready():
-	OS.set_window_size(Vector2(320,240))
+	pass # OS.set_window_size(Vector2(320,240))
 
 func _input(event):
 	var music = AudioStreamPlayer.new()
@@ -153,5 +153,6 @@ func set_instrument(instrument_array, isHard, audio_stream_player):
 
 func _process(delta):
 	for instrument in instrument_dict.values():
-		if instrument[2].value > 0:
-			instrument[2].value -= 1
+		if instrument[2] != null:
+			if instrument[2].value > 0:
+				instrument[2].value -= 1
